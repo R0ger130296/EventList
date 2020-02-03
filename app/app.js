@@ -1,6 +1,6 @@
   import React from 'react';
   import { StyleSheet, Text, View } from 'react-native';
-  import EventList from './EventList';
+  import EventList from './EvenList';
   import { YellowBox } from 'react-native';
 
   YellowBox.ignoreWarnings([
@@ -10,6 +10,6 @@
 
   export default class App extends React.Component {
       render() {
-          return <EventList / > ;
+          return <EventList/> ;
       }
   }

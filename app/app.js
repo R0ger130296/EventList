@@ -1,27 +1,15 @@
-import React, { Component } from 'react';
-import { Text, FlatList } from 'react-native';
+  import React from 'react';
+  import { StyleSheet, Text, View } from 'react-native';
+  import EventList from './EventList';
+  import { YellowBox } from 'react-native';
 
-class EventList extends Component {
-    state = {
-        events: []
-    }
+  YellowBox.ignoreWarnings([
+      'Warning: componentWillMount is deprecated',
+      'Warning: componentWillReceiveProps is deprecated',
+  ]);
 
-    componentDidMount() {
-        const events = require('./db.json').events;
-    }
-
-    render() {
-
-        return ( <
-            FlatList date = {
-                [{ name: 'a' }, { name: 'b' }]
-            }
-            renderItem = {
-                ({ item }) => < Text > { item.name } < /Text>
-            }
-            KeyExtractor = { item.id }
-            />
-        );
-    }
-}
-export default EventList;
+  export default class App extends React.Component {
+      render() {
+          return <EventList / > ;
+      }
+  }
